@@ -1,6 +1,9 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
+
 
 <head>
   <title>Kaira - Bootstrap 5 Fashion Store HTML CSS Template</title>
@@ -337,114 +340,116 @@
       <div class="row">
         <div class="swiper main-swiper py-4" data-aos="fade-up" data-aos-delay="600">
           <div class="swiper-wrapper d-flex border-animation-left">
+            {% for product in products %}
             <div class="swiper-slide">
               <div class="banner-item image-zoom-effect">
                 <div class="image-holder">
                   <a href="#">
-                    <img src="{% static 'images/soat-1.jpg' %}" alt="product" class="img-fluid">
+                    <img src="{{ product.image.url }}" alt="product" class="img-fluid">
                   </a>
                 </div>
                 <div class="banner-content py-4">
                   <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Soft leather jackets</a>
+                    <a href="/" class="item-anchor">{{ product.title }}</a>
                   </h5>
-                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>
+                  <p>Yangi kolleksiyamiz tugab qolishidan oldin ohzir bizga qo'ngiroq qilib buyurtma qiling</p>
                   <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
+                    <a href="tel:{{ product.phone }}" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Qo'ng'iroq qilish</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="{% static 'images/soat-2.jpg' %}" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Soft leather jackets</a>
-                  </h5>
-                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="{% static 'images/soat-3.jpg' %}" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Soft leather jackets</a>
-                  </h5>
-                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/banner-image-3.jpg" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Soft leather jackets</a>
-                  </h5>
-                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/banner-image-4.jpg" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Out crop sweater</a>
-                  </h5>
-                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/banner-image-5.jpg" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Soft leather jackets</a>
-                  </h5>
-                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
+<!--            <div class="swiper-slide">-->
+<!--              <div class="banner-item image-zoom-effect">-->
+<!--                <div class="image-holder">-->
+<!--                  <a href="#">-->
+<!--                    <img src="{% static 'images/soat-2.jpg' %}" alt="product" class="img-fluid">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="banner-content py-4">-->
+<!--                  <h5 class="element-title text-uppercase">-->
+<!--                    <a href="index.html" class="item-anchor">Soft leather jackets</a>-->
+<!--                  </h5>-->
+<!--                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>-->
+<!--                  <div class="btn-left">-->
+<!--                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="banner-item image-zoom-effect">-->
+<!--                <div class="image-holder">-->
+<!--                  <a href="#">-->
+<!--                    <img src="{% static 'images/soat-3.jpg' %}" alt="product" class="img-fluid">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="banner-content py-4">-->
+<!--                  <h5 class="element-title text-uppercase">-->
+<!--                    <a href="index.html" class="item-anchor">Soft leather jackets</a>-->
+<!--                  </h5>-->
+<!--                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>-->
+<!--                  <div class="btn-left">-->
+<!--                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="banner-item image-zoom-effect">-->
+<!--                <div class="image-holder">-->
+<!--                  <a href="#">-->
+<!--                    <img src="images/banner-image-3.jpg" alt="product" class="img-fluid">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="banner-content py-4">-->
+<!--                  <h5 class="element-title text-uppercase">-->
+<!--                    <a href="index.html" class="item-anchor">Soft leather jackets</a>-->
+<!--                  </h5>-->
+<!--                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>-->
+<!--                  <div class="btn-left">-->
+<!--                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="banner-item image-zoom-effect">-->
+<!--                <div class="image-holder">-->
+<!--                  <a href="#">-->
+<!--                    <img src="images/banner-image-4.jpg" alt="product" class="img-fluid">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="banner-content py-4">-->
+<!--                  <h5 class="element-title text-uppercase">-->
+<!--                    <a href="index.html" class="item-anchor">Out crop sweater</a>-->
+<!--                  </h5>-->
+<!--                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>-->
+<!--                  <div class="btn-left">-->
+<!--                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="banner-item image-zoom-effect">-->
+<!--                <div class="image-holder">-->
+<!--                  <a href="#">-->
+<!--                    <img src="images/banner-image-5.jpg" alt="product" class="img-fluid">-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--                <div class="banner-content py-4">-->
+<!--                  <h5 class="element-title text-uppercase">-->
+<!--                    <a href="index.html" class="item-anchor">Soft leather jackets</a>-->
+<!--                  </h5>-->
+<!--                  <p>Scelerisque duis aliquam qui lorem ipsum dolor amet, consectetur adipiscing elit.</p>-->
+<!--                  <div class="btn-left">-->
+<!--                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Discover Now</a>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -505,48 +510,92 @@
     <div class="container">
       <div class="open-up" data-aos="zoom-out">
         <div class="row">
+          {% for banner in banners %}
           <div class="col-md-4">
             <div class="cat-item image-zoom-effect">
               <div class="image-holder">
                 <a href="index.html">
-                  <img src="{% static 'images/soat2.jpg' %}" alt="categories" class="product-image img-fluid">
+                  <img src="{{ banner.image.url }}" alt="categories" class="product-image img-fluid">
                 </a>
               </div>
               <div class="category-content">
                 <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Shop for men</a>
+                  <a href="index.html" class="btn btn-common text-uppercase">{{ banner.title }}</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="cat-item image-zoom-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="{% static 'images/soat4.jpg' %}" alt="categories" class="product-image img-fluid">
-                </a>
-              </div>
-              <div class="category-content">
-                <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Shop for women</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="cat-item image-zoom-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="{% static 'images/soat5.jpg' %}" alt="categories" class="product-image img-fluid">
-                </a>
-              </div>
-              <div class="category-content">
-                <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Shop accessories</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
+<!--          <div class="col-md-4">-->
+<!--            <div class="cat-item image-zoom-effect">-->
+<!--              <div class="image-holder">-->
+<!--                <a href="index.html">-->
+<!--                  <img src="{% static 'images/soat4.jpg' %}" alt="categories" class="product-image img-fluid">-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="category-content">-->
+<!--                <div class="product-button">-->
+<!--                  <a href="index.html" class="btn btn-common text-uppercase">Shop for women</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-4">-->
+<!--            <div class="cat-item image-zoom-effect">-->
+<!--              <div class="image-holder">-->
+<!--                <a href="index.html">-->
+<!--                  <img src="{% static 'images/soat5.jpg' %}" alt="categories" class="product-image img-fluid">-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="category-content">-->
+<!--                <div class="product-button">-->
+<!--                  <a href="index.html" class="btn btn-common text-uppercase">Shop accessories</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-4">-->
+<!--            <div class="cat-item image-zoom-effect">-->
+<!--              <div class="image-holder">-->
+<!--                <a href="index.html">-->
+<!--                  <img src="{% static 'images/soat2.jpg' %}" alt="categories" class="product-image img-fluid">-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="category-content">-->
+<!--                <div class="product-button">-->
+<!--                  <a href="index.html" class="btn btn-common text-uppercase">Shop for men</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-4">-->
+<!--            <div class="cat-item image-zoom-effect">-->
+<!--              <div class="image-holder">-->
+<!--                <a href="index.html">-->
+<!--                  <img src="{% static 'images/soat4.jpg' %}" alt="categories" class="product-image img-fluid">-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="category-content">-->
+<!--                <div class="product-button">-->
+<!--                  <a href="index.html" class="btn btn-common text-uppercase">Shop for women</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-4">-->
+<!--            <div class="cat-item image-zoom-effect">-->
+<!--              <div class="image-holder">-->
+<!--                <a href="index.html">-->
+<!--                  <img src="{% static 'images/soat5.jpg' %}" alt="categories" class="product-image img-fluid">-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="category-content">-->
+<!--                <div class="product-button">-->
+<!--                  <a href="index.html" class="btn btn-common text-uppercase">Shop accessories</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
@@ -560,11 +609,12 @@
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
         <div class="swiper-wrapper d-flex">
+          {% for slide in sliders %}
           <div class="swiper-slide">
             <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder position-relative">
                 <a href="index.html">
-                  <img src="{% static 'images/soat-2.jpg' %}" alt="categories" class="product-image img-fluid">
+                  <img src="{{ slide.image.url }}" alt="categories" class="product-image img-fluid">
                 </a>
                 <a href="index.html" class="btn-icon btn-wishlist">
                   <svg width="24" height="24" viewBox="0 0 24 24">
@@ -573,93 +623,14 @@
                 </a>
                 <div class="product-content">
                   <h5 class="element-title text-uppercase fs-5 mt-3">
-                    <a href="index.html">Dark florish onepiece</a>
+                    <a href="index.html">{{ slide.title }}</a>
                   </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>$95.00</span></a>
+                  <a href="#" class="text-decoration-none" data-after=""><span>{{ slide.price }}</span></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="{% static 'images/soat-5.jpg' %}" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Baggy Shirt</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>$55.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="{% static 'images/soat-1.jpg' %}" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Cotton off-white shirt</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>$65.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="{% static 'images/soat-4.jpg' %}" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Crop sweater</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>$50.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="{% static 'images/soat-6.jpg' %}" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Crop sweater</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -915,48 +886,15 @@
       <a href="https://www.instagram.com/luxury_watch_sam/" class="btn btn-dark px-5">Instagramga obuna bo'lish</a>
     </div>
     <div class="row g-0">
+      {% for banner in banners %}
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
           <a href="https://www.instagram.com/luxury_watch_sam/" target="_blank">
-            <img src="{% static 'images/soat6.jpg' %}" alt="instagram" class="insta-image img-fluid">
+            <img src="{{ banner.image.url }}" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
-      <div class="col-6 col-sm-4 col-md-2">
-        <div class="insta-item">
-          <a href="https://www.instagram.com/luxury_watch_sam/" target="_blank">
-            <img src="{% static 'images/soat5.jpg' %}" alt="instagram" class="insta-image img-fluid">
-          </a>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2">
-        <div class="insta-item">
-          <a href="https://www.instagram.com/luxury_watch_sam/" target="_blank">
-            <img src="{% static 'images/soat7.jpg' %}" alt="instagram" class="insta-image img-fluid">
-          </a>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2">
-        <div class="insta-item">
-          <a href="https://www.instagram.com/luxury_watch_sam/" target="_blank">
-            <img src="{% static 'images/soat2.jpg' %}" alt="instagram" class="insta-image img-fluid">
-          </a>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2">
-        <div class="insta-item">
-          <a href="https://www.instagram.com/luxury_watch_sam/" target="_blank">
-            <img src="{% static 'images/soat1.jpg' %}" alt="instagram" class="insta-image img-fluid">
-          </a>
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 col-md-2">
-        <div class="insta-item">
-          <a href="https://www.instagram.com/luxury_watch_sam/" target="_blank">
-            <img src="{% static 'images/soat3.jpg' %}" alt="instagram" class="insta-image img-fluid">
-          </a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
 
