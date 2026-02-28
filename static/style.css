@@ -1560,3 +1560,28 @@ a.btn-link.text-light:after {
         padding: 10px 15px;
     }
 }
+
+.pagination {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination .current {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 3px;
+}
+
+.btn-prev, .btn-next {
+    font-weight: bold;
+}

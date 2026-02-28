@@ -788,3 +788,4 @@ else
     window.SmoothScroll = SmoothScroll;
 
 })();
+

@@ -1,12 +1,10 @@
 {% load static %}
-
+{% load humanize %}
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
-  <title>Kaira - Bootstrap 5 Fashion Store HTML CSS Template</title>
+  <title>Luxury Watch - Premium Darajadagi soatlar</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +24,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Marcellus&display=swap"
     rel="stylesheet">
+  <link rel="icon" href="{% static '/images/logo.jpg' %}">
 </head>
 
 <body class="homepage">
@@ -156,91 +155,6 @@
   </svg>
 
   <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
-
-<!--  <div class="search-popup">-->
-<!--    <div class="search-popup-container">-->
-
-<!--      <form role="search" method="get" class="form-group" action="">-->
-<!--        <input type="search" id="search-form" class="form-control border-0 border-bottom"-->
-<!--          placeholder="Type and press enter" value="" name="s" />-->
-<!--        <button type="submit" class="search-submit border-0 position-absolute bg-white"-->
-<!--          style="top: 15px;right: 15px;"><svg class="search" width="24" height="24">-->
-<!--            <use xlink:href="#search"></use>-->
-<!--          </svg></button>-->
-<!--      </form>-->
-
-<!--      <h5 class="cat-list-title">Browse Categories</h5>-->
-
-<!--      <ul class="cat-list">-->
-<!--        <li class="cat-list-item">-->
-<!--          <a href="#" title="Jackets">Jackets</a>-->
-<!--        </li>-->
-<!--        <li class="cat-list-item">-->
-<!--          <a href="#" title="T-shirts">T-shirts</a>-->
-<!--        </li>-->
-<!--        <li class="cat-list-item">-->
-<!--          <a href="#" title="Handbags">Handbags</a>-->
-<!--        </li>-->
-<!--        <li class="cat-list-item">-->
-<!--          <a href="#" title="Accessories">Accessories</a>-->
-<!--        </li>-->
-<!--        <li class="cat-list-item">-->
-<!--          <a href="#" title="Cosmetics">Cosmetics</a>-->
-<!--        </li>-->
-<!--        <li class="cat-list-item">-->
-<!--          <a href="#" title="Dresses">Dresses</a>-->
-<!--        </li>-->
-<!--        <li class="cat-list-item">-->
-<!--          <a href="#" title="Jumpsuits">Jumpsuits</a>-->
-<!--        </li>-->
-<!--      </ul>-->
-
-<!--    </div>-->
-<!--  </div>-->
-
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
-    <div class="offcanvas-header justify-content-center">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-pill">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Growers cider</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Fresh grapes</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Heinz tomato ketchup</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-        </ul>
-
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to Checkout</button>
-      </div>
-    </div>
-  </div>
-
   <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center">
     <div class="container-fluid align-items-center">
       <div class="row justify-content-between align-items-center w-100">
@@ -282,6 +196,20 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">Bog'lanish</a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a href="https://t.me/luxury_watch_sam" class="text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M16 0L0 6l4 2 2 6 3-4 4 2 3-14z"/>
+                    </svg>
+                  </a>
+                </li >
+                <li class="nav-item mt-2">
+                  <a href="https://instagram.com/luxury_watch_sam/" class="text-secondary">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <use xlink:href="#instagram"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -344,11 +272,11 @@
             <div class="swiper-slide">
               <div class="banner-item image-zoom-effect">
                 <div class="image-holder">
-                  <a href="#">
+                  <a href="/">
                     <img src="{{ product.image.url }}" alt="product" class="img-fluid">
                   </a>
                 </div>
-                <div class="banner-content py-4">
+                <div class="banner-content py-4 m-2">
                   <h5 class="element-title text-uppercase">
                     <a href="/" class="item-anchor">{{ product.title }}</a>
                   </h5>
@@ -514,13 +442,13 @@
           <div class="col-md-4">
             <div class="cat-item image-zoom-effect">
               <div class="image-holder">
-                <a href="index.html">
+                <a href="/">
                   <img src="{{ banner.image.url }}" alt="categories" class="product-image img-fluid">
                 </a>
               </div>
               <div class="category-content">
                 <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">{{ banner.title }}</a>
+                  <a href="/" class="btn btn-common text-uppercase">{{ banner.title }}</a>
                 </div>
               </div>
             </div>
@@ -605,7 +533,6 @@
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
         <h4 class="text-uppercase">Yangi Yetib Kelganlar</h4>
-        <a href="index.html" class="btn-link">View All Products</a>
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
         <div class="swiper-wrapper d-flex">
@@ -613,7 +540,7 @@
           <div class="swiper-slide">
             <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder position-relative">
-                <a href="index.html">
+                <a href="/">
                   <img src="{{ slide.image.url }}" alt="categories" class="product-image img-fluid">
                 </a>
                 <a href="index.html" class="btn-icon btn-wishlist">
@@ -623,9 +550,9 @@
                 </a>
                 <div class="product-content">
                   <h5 class="element-title text-uppercase fs-5 mt-3">
-                    <a href="index.html">{{ slide.title }}</a>
+                    <a href="/">{{ slide.title }}</a>
                   </h5>
-                  <a href="#" class="text-decoration-none" data-after=""><span>{{ slide.price }}</span></a>
+                  <a href="#" class="text-decoration-none" data-after="+998 (88) 262-22-25"><span>{{ slide.price|floatformat:0|intcomma  }} so'm</span></a>
                 </div>
               </div>
             </div>
@@ -657,7 +584,7 @@
             <div class="collection-content p-5 m-0 m-md-5">
               <h3 class="element-title">Har soniya — bu imkoniyat.</h3>
               <p>Har bir soniya — bizga berilayotgan imkoniyat. Shunday paytda ishonchli hamroh zarur. Bizning soatlar zamonaviy dizayn va yuqori aniqlikni uyg‘unlashtirib, har kuningizni tartib va ishonch bilan boshlashingizga yordam beradi. Bu shunchaki vaqtni ko‘rsatadigan aksessuar emas — bu sizning uslubingiz, mas’uliyatingiz va qat’iyatingizning davomi. Har bir soniyangizni bekorga sarflamang.</p>
-              <a href="tel:+998915322231" class="btn btn-dark text-uppercase mt-3">Qo'ng'iroq qilish</a>
+              <a href="tel:+998882622225" class="btn btn-dark text-uppercase mt-3">Qo'ng'iroq qilish</a>
             </div>
           </div>
         </div>
@@ -952,37 +879,12 @@
             </ul>
           </div>
         </div>
-<!--        <div class="col-md-3 col-sm-6">-->
-<!--          <div class="footer-menu footer-menu-003">-->
-<!--            <h5 class="widget-title text-uppercase mb-4">Help & Info</h5>-->
-<!--            <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">-->
-<!--              <li class="menu-item">-->
-<!--                <a href="#" class="item-anchor">Track Your Order</a>-->
-<!--              </li>-->
-<!--              <li class="menu-item">-->
-<!--                <a href="#" class="item-anchor">Returns + Exchanges</a>-->
-<!--              </li>-->
-<!--              <li class="menu-item">-->
-<!--                <a href="#" class="item-anchor">Shipping + Delivery</a>-->
-<!--              </li>-->
-<!--              <li class="menu-item">-->
-<!--                <a href="#" class="item-anchor">Contact Us</a>-->
-<!--              </li>-->
-<!--              <li class="menu-item">-->
-<!--                <a href="#" class="item-anchor">Find us easy</a>-->
-<!--              </li>-->
-<!--              <li class="menu-item">-->
-<!--                <a href="index.html" class="item-anchor">Faqs</a>-->
-<!--              </li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
         <div class="col-md-3 col-sm-6">
           <div class="footer-menu footer-menu-004 border-animation-left">
             <h5 class="widget-title text-uppercase mb-4">Bog'lanish</h5>
-            <p><a href="mailto:ergashevazizdev@gmail.com"
-                class="item-anchor">ergashevazizdev@gmail.com</a></p>
-            <p><a href="tel:+43 720 11 52 78" class="item-anchor">+998 (91) 532-22-31</a>
+            <p><a href="tel:+998880202225"
+                class="item-anchor">+998 (88) 020-22-25</a></p>
+            <p><a href="tel:+998882622225" class="item-anchor">+998 (88) 262 22 25</a>
             </p>
           </div>
         </div>
